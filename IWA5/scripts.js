@@ -35,8 +35,9 @@ if (total >= 1000 && (location === 'RSA' || location === 'NAM') && customers ===
   if (shipping === 0 && customers !== 1) {
 	console.log(FREE_WARNING)
   } 
-  
+
   else {
 	console.log('Price:', currency + total + shipping)
   }
+  
   
