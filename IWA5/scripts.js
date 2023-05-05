@@ -27,13 +27,16 @@ const total = shoes + toys + shirts + batteries + pens
 if (total >= 1000 && (location === 'RSA' || location === 'NAM') && customers === 1) {
 	shipping = 0
   } 
+
   else if (shipping === null) {
 	console.log(BANNED_WARNING)
   }
   
   if (shipping === 0 && customers !== 1) {
 	console.log(FREE_WARNING)
-  } else {
+  } 
+  
+  else {
 	console.log('Price:', currency + total + shipping)
   }
   
