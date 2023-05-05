@@ -5,8 +5,12 @@ const NONE_SELECTED = 0
 const location = 'RSA'
 let shipping = null
 let currency = '$'
+let customers = 1
 
-if (location === 'RSA') { shipping === 400 && currency === 'R' }
+if (location === 'RSA') { 
+	shipping = 400;
+	currency = 'R' 
+}
 
 else if (location === NAM) {
 shipping = 600}
@@ -17,17 +21,19 @@ const toys = 100 * 5
 const shirts = 150 * NONE_SELECTED
 const batteries = 35 * 2
 const pens = 5 * NONE_SELECTED 
-let customers = 1
 
-if (shoes + batteries + pens + shirts > 1000) {
-if (location = NAM && customers < 2) {
-			if (location = RSA)
-		    shipping = 0 || calcShipping
-		}
-	}
+const totalCost = shoes + toys + shirts + batteries + pens;
 
-if (shipping = 0) (customers !== 1) 
-console.log(FREE_WARNING)
-
-location === 'NK' ? console.log(BANNED_WARNING) : console.log('price', currency, shoes + batteries + pens + shirts + shipping)
-
+if (totalCost >= 1000 && (location === 'RSA' || location === 'NAM') && customers === 1) {
+	shipping = 0;
+  } 
+  else if (shipping === null) {
+	console.log(BANNED_WARNING);
+  }
+  
+  if (shipping === 0 && customers !== 1) {
+	console.log(FREE_WARNING);
+  } else {
+	console.log('Price:', currency + totalCost + shipping);
+  }
+  
