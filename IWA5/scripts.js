@@ -22,18 +22,18 @@ const shirts = 150 * NONE_SELECTED
 const batteries = 35 * 2
 const pens = 5 * NONE_SELECTED 
 
-const totalCost = shoes + toys + shirts + batteries + pens;
+const total = shoes + toys + shirts + batteries + pens
 
-if (totalCost >= 1000 && (location === 'RSA' || location === 'NAM') && customers === 1) {
-	shipping = 0;
+if (total >= 1000 && (location === 'RSA' || location === 'NAM') && customers === 1) {
+	shipping = 0
   } 
   else if (shipping === null) {
-	console.log(BANNED_WARNING);
+	console.log(BANNED_WARNING)
   }
   
   if (shipping === 0 && customers !== 1) {
-	console.log(FREE_WARNING);
+	console.log(FREE_WARNING)
   } else {
-	console.log('Price:', currency + totalCost + shipping);
+	console.log('Price:', currency + total + shipping)
   }
   
