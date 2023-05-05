@@ -4,15 +4,15 @@ NONE_SELECTED = '0'
 
 if (location = RSA) { shipping === 400 && currency === 'R' }
 
-if location = NAM
-shipping = 600 
-else shipping = 800
+if (location === NAM) {
+shipping = 600}
+else {shipping = 800}
 
-shoes = 300 * 1
-toys - 100 * 5
-shirts = 150 * 'NONE_SELECTED'
-batteries 35 * 2
-pens = 5 * 'NONE_SELECTED' 
+const shoes = 300 * 1
+const toys = 100 * 5
+const shirts = 150 * 'NONE_SELECTED'
+const batteries = 35 * 2
+const pens = 5 * 'NONE_SELECTED' 
 
 shipping = null
 currency = $
