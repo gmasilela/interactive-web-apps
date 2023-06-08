@@ -5,13 +5,13 @@ function add(a, b) {
   }
   
   function multiply(a, b) {
-	return a - b;
+	return a * b;
   }
   
   function internal() {
 	const added = this.add(this.internal.a, this.internal.b);
-	const multiplied = this.multiply(this.internal.a, this.internal.b);
-	console.log(added, multiplied);
+	const multiplied = this.multiply(added, this.internal.c);
+	console.log(multiplied);
 	return this;
   }
   
