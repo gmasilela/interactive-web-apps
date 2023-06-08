@@ -5,4 +5,4 @@ export const surname = "Potgieter";
 export const role = "Intern";
 
 const display= firstname + " " + surname + " (" + role + ")"
-document.querySelector('#johannes').innerText = display
+document.querySelector('#johannes').innerText = display;
