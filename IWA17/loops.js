@@ -101,3 +101,4 @@ document.querySelector('[data-title]').innerText = `${MONTHS[current.getMonth()]
 
 const data = createData();
 document.querySelector('[data-content]').innerHTML = createHtml(data);
+
