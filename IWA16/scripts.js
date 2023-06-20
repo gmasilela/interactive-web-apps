@@ -64,7 +64,7 @@ const MONTHS = [
   
   const createHtml = (athlete) => {
     const { firstName, surname, id, races } = athlete;
-    const [latestRace] = races.slice().reverse(); // Get the latest race by reversing the order of races
+    const [latestRace] = races.slice().reverse(); 
   
     const fragment = document.createDocumentFragment();
   
