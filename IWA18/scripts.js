@@ -3,7 +3,7 @@ import { createOrderHtml, html, updateDraggingHtml, moveToColumn } from './view.
 
 const handleDragOver = (event) => {
   event.preventDefault();
-  const path = event.path || event.composedPath();
+  const path = event.path || event.composedPath();              //.................Original code
   let column = null;
 
   for (const element of path) {
@@ -128,7 +128,7 @@ const handleCancel = () => {
   html.addButton.focus();
 };
 
-html.helpButton.addEventListener("click", handleHelpToggle);
+html.helpButton.addEventListener("click", handleHelpToggle);                   //.........................original code
 html.helpCancel.addEventListener("click", handleHelpToggle);
 
 html.addButton.addEventListener("click", handleAddToggle);
