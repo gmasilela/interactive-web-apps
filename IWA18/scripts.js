@@ -1,3 +1,14 @@
+/**
+ * A handler that fires when a user drags over any element inside a column. In
+ * order to determine which column the user is dragging over the entire event
+ * bubble path is checked with `event.path` (or `event.composedPath()` for
+ * browsers that don't support `event.path`). The bubbling path is looped over
+ * until an element with a `data-area` attribute is found. Once found both the
+ * active dragging column is set in the `state` object in "data.js" and the HTML
+ * is updated to reflect the new column.
+ *
+ * @param {Event} event 
+ */
 import { TABLES, COLUMNS, state, createOrderData, updateDragging } from './data.js';
 import { createOrderHtml, html, updateDraggingHtml, moveToColumn } from './view.js';
 
@@ -128,23 +139,23 @@ const handleCancel = () => {
   html.addButton.focus();
 };
 
-html.helpButton.addEventListener("click", handleHelpToggle);                   //.........................original code
-html.helpCancel.addEventListener("click", handleHelpToggle);
+html.add.cancel.addEventListener('click', handleAddToggle)               //.................Original code
+html.other.add.addEventListener('click', handleAddToggle)
+html.add.form.addEventListener('submit', handleAddSubmit)
 
-html.addButton.addEventListener("click", handleAddToggle);
-html.addCancel.addEventListener("click", handleCancel);
-html.addForm.addEventListener("submit", handleAddSubmit);
+html.other.grid.addEventListener('click', handleEditToggle)
+html.edit.cancel.addEventListener('click', handleEditToggle)
+html.edit.form.addEventListener('submit', handleEditSubmit)
+html.edit.delete.addEventListener('click', handleDelete)
 
-html.grid.addEventListener("click", handleEditToggle);
-html.editCancel.addEventListener("click", handleCancel);
-html.editForm.addEventListener("submit", handleEditSubmit);
-html.editDelete.addEventListener("click", handleDelete);
+html.help.cancel.addEventListener('click', handleHelpToggle)
+html.other.help.addEventListener('click', handleHelpToggle)
 
 for (const htmlColumn of Object.values(html.columns)) {
-  htmlColumn.addEventListener("dragstart", handleDragStart);
-  htmlColumn.addEventListener("dragend", handleDragEnd);
+    htmlColumn.addEventListener('dragstart', handleDragStart)
+    htmlColumn.addEventListener('dragend', handleDragEnd)
 }
 
 for (const htmlArea of Object.values(html.area)) {
-  htmlArea.addEventListener("dragover", handleDragOver);
+    htmlArea.addEventListener('dragover', handleDragOver)
 }

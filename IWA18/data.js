@@ -38,7 +38,7 @@ export const COLUMNS = [
  * saved in storage (either local or remote).
  */
 export const state = {
-    orders: {},
+    orders: {},  //.............
     dragging: {
         source: null,
         over: null,

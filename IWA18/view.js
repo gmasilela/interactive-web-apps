@@ -71,8 +71,8 @@ const createTableOptionsHtml = () => {
  * dynamically by a loop that runs over the COLUMNS array.
  */
 export const html = {
-    columns: {},
-    area: {},
+    columns: {},  //.............
+    area: {},  //.............
     add: {
         overlay: document.querySelector('[data-add-overlay]'),
         form: document.querySelector('[data-add-form]'),
